@@ -16,7 +16,7 @@ executable lyahfgg
 
 test-suite test
   type:             exitcode-stdio-1.0
-  main-Is:          Test.hs
+  main-Is:          test.hs
   hs-source-dirs:   src, test
   build-depends:    base >= 4.2 && < 5,
                     tasty >= 0.11 && < 0.12,
