@@ -2,7 +2,7 @@ module Tests.AbstractDataTypes where
 
 import Test.Tasty (TestTree, defaultMain, testGroup)
 import Test.Tasty.HUnit (assertEqual, testCase)
-import AbstractDataTypes (Point(Point), Shape(Circle, Rect), surface)
+import AbstractDataTypes (Point(Point), Shape(Circle, Rect), surface, nudge)
 
 tests :: TestTree
 tests = testGroup "Abstract Data Type"
@@ -14,4 +14,8 @@ tests = testGroup "Abstract Data Type"
     assertEqual "calculates surface of rectangle"
       (surface $ Rect (Point 0 0) (Point 100 100))
       10000.0
+  ), testCase "nudge" (
+    assertEqual "nudges circle by amount provided"
+      (nudge (Circle (Point 34 34) 10) 5 10)
+      (Circle (Point 39.0 44.0) 10.0)
   )]
