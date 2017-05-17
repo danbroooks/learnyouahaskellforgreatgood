@@ -1,3 +1,4 @@
-main :: IO ()
-main = putStrLn "learn you a haskell for great good"
+module Main where
 
+main :: IO ()
+main = putStrLn "Run the tests with cabal test"
