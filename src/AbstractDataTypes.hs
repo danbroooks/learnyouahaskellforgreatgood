@@ -1,7 +1,9 @@
 module AbstractDataTypes where
 
-data Shape = Circle Float Float Float | Rect Float Float Float Float deriving (Show)
+data Point = Point Float Float deriving (Show)
+
+data Shape = Circle Point Float | Rect Point Point deriving (Show)
 
 surface :: Shape -> Float
-surface (Circle _ _ r) = pi * r ^ 2
-surface (Rect xa ya xb yb) = (abs $ xb - xa) * (abs $ yb - ya)
+surface (Circle _ r) = pi * r ^ 2
+surface (Rect (Point xa ya) (Point xb yb)) = (abs $ xb - xa) * (abs $ yb - ya)
