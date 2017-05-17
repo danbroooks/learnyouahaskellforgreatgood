@@ -2,7 +2,7 @@ module Tests.AbstractDataTypes where
 
 import Test.Tasty (TestTree, defaultMain, testGroup)
 import Test.Tasty.HUnit (assertEqual, testCase)
-import AbstractDataTypes (Point(Point), Shape(Circle, Rect), surface, nudge)
+import AbstractDataTypes (Point(..), Shape(..), surface, nudge)
 
 tests :: TestTree
 tests = testGroup "Abstract Data Type"
